@@ -1,6 +1,17 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+}
+
 /* General Header Styling */
 header {
-    background-color: #151b29; /* Dark background */
+     background-color: #151b29;/* Dark background */
+
     color: white;
     padding: 15px 5%; /* Padding around the header */
     display: flex;
@@ -63,23 +74,23 @@ header {
     align-items: center;
 }
 
-/* Specific color for font awesome icons to ensure visibility */
-.nav-buttons i, .cart-icon i {
-    background: white; /* Explicitly set color for all icons */
-}
-
 /* Cart Icon with Item Count */
 .cart-icon {
     position: relative;
     margin-left: 20px;
 }
-.fas {
-    color: white !important;
-  }
-  
-  .cart-icon i {
-    color: white !important; /* Force white color for cart icon */
-  }
+
+.cart-icon a {
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+.cart-icon .fas {
+    color: white;
+    font-size: 18px;
+}
+
 .cart-count {
     position: absolute;
     top: -8px;
@@ -101,6 +112,7 @@ nav {
     padding: 0 5%; /* Padding for the nav items */
     position: relative;
     z-index: 50; /* Lower z-index for main nav */
+    width: 100%; /* Full width navigation */
 }
 
 /* Navigation Items */
@@ -163,7 +175,8 @@ nav .dropdown-menu {
     z-index: 100; /* Higher z-index than nav */
 }
 
-nav .nav-item:hover .dropdown-menu {
+nav .nav-item:hover .dropdown-menu,
+nav .dropdown-menu.active {
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
@@ -208,28 +221,58 @@ nav .nav-item:hover .dropdown-menu {
 @media (max-width: 992px) {
     /* Adjust header for mobile */
     header {
-        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: flex-start;
     }
     
     .logo {
-        margin-bottom: 10px;
+        margin-bottom: 15px;
+        align-self: center;
     }
     
     .search-container {
         order: 3;
-        margin: 10px 0;
+        margin: 15px 0;
         width: 100%;
         max-width: 100%;
     }
     
     .nav-buttons {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin-top: 15px;
         order: 2;
+    }
+    
+    .nav-buttons .nav-item,
+    .cart-icon {
+        margin: 0;
+    }
+    
+    .nav-buttons a {
+        margin: 0;
+    }
+    
+    /* Keep dropdowns positioned relative to their parent */
+    .nav-buttons .dropdown-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: auto;
+        transform: translateY(10px);
+        width: 180px;
+    }
+    
+    .nav-buttons .nav-item:hover .dropdown-menu {
+        transform: translateY(0);
     }
 
     /* Make navigation container vertical on mobile */
     .nav-container {
         flex-direction: column;
         display: none;
+        width: 100%;
     }
 
     /* Display nav when toggled */
@@ -252,13 +295,6 @@ nav .nav-item:hover .dropdown-menu {
         display: none;
         box-shadow: none;
         background-color: #2c3a4f; /* Darker background for mobile */
-    }
-
-    /* Keep header dropdowns absolute positioned */
-    .nav-buttons .dropdown-menu {
-        position: absolute;
-        right: 0;
-        top: 100%;
     }
 
     /* Adjust dropdown link styling for mobile */
@@ -290,15 +326,41 @@ nav .nav-item:hover .dropdown-menu {
 
 /* Small screens adjustments */
 @media (max-width: 576px) {
+    /* Keep nav buttons in a single row */
     .nav-buttons {
-        margin-left: auto;
+        flex-wrap: nowrap;
+        justify-content: space-between;
     }
     
-    .nav-buttons a {
-        margin-left: 10px;
+    .nav-buttons .nav-item > a,
+    .cart-icon a {
+        font-size: 14px;
+        padding: 8px 10px;
     }
     
-    .cart-icon {
-        margin-left: 10px;
+    /* Ensure dropdowns don't overflow the screen */
+    .nav-buttons .dropdown-menu {
+        width: 160px;
+        left: 0;
+        right: auto;
+    }
+    
+    /* For very small screens */
+    @media (max-width: 360px) {
+        .nav-buttons .nav-item > a {
+            padding: 8px 5px;
+            font-size: 13px;
+        }
+    }
+}
+
+/* Large screens - ensure proper spacing */
+@media (min-width: 1200px) {
+    header {
+        padding: 15px 8%;
+    }
+    
+    nav {
+        padding: 0 8%;
     }
 }

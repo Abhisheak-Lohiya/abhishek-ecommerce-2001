@@ -9,7 +9,7 @@
     
     <div class="nav-buttons">
         <div class="nav-item">
-            <a href="#" class="has-dropdown"><i class="fas fa-user"></i> Sign In</a>
+            <a href="#" class="has-dropdown">Sign In</a>
             <div class="dropdown-menu">
                 <a href="#">Login</a>
                 <a href="#">Register</a>
@@ -19,7 +19,7 @@
         </div>
         
         <div class="nav-item">
-            <a href="#" class="has-dropdown"><i class="fas fa-box"></i> Orders</a>
+            <a href="#" class="has-dropdown">Orders</a>
             <div class="dropdown-menu">
                 <a href="#">My Orders</a>
                 <a href="#">Track Package</a>
@@ -28,8 +28,9 @@
             </div>
         </div>
         
-        <div class="nav-item cart-icon">
-            <a href="#"><i class="fas fa-shopping-cart"></i>
+        <div class="cart-icon">
+            <a href="#">
+                Cart
                 <span class="cart-count">3</span>
             </a>
         </div>
@@ -38,7 +39,7 @@
 
 <!-- Navigation with Dropdowns -->
 <nav>
-    <button class="menu-toggle" (click)="toggleMobileMenu()"><i class="fas fa-bars"></i></button>
+    <button class="menu-toggle" (click)="toggleMobileMenu()"><i class="fas fa-bars"></i> Menu</button>
     <div class="nav-container" [ngClass]="{'active': isMobileMenuOpen}">
         <div class="nav-item" (click)="toggleDropdown('allCategoriesDropdown')">
             <a href="#" class="has-dropdown">All Categories</a>
@@ -84,6 +85,16 @@
             </div>
         </div>
         
-        <!-- Add other dropdowns similarly here -->
+        <div class="nav-item">
+            <a href="#">Total Sale</a>
+        </div>
+        
+        <div class="nav-item">
+            <a href="#">New Arrivals</a>
+        </div>
+        
+        <div class="nav-item">
+            <a href="#">Best Sellers</a>
+        </div>
     </div>
 </nav>
