@@ -1,0 +1,89 @@
+<!-- Header -->
+<header>
+    <a href="#" class="logo">ShopHub</a>
+    
+    <div class="search-container">
+        <input type="text" placeholder="Search products...">
+        <button>Search</button>
+    </div>
+    
+    <div class="nav-buttons">
+        <div class="nav-item">
+            <a href="#" class="has-dropdown"><i class="fas fa-user"></i> Sign In</a>
+            <div class="dropdown-menu">
+                <a href="#">Login</a>
+                <a href="#">Register</a>
+                <a href="#">My Profile</a>
+                <a href="#">Settings</a>
+            </div>
+        </div>
+        
+        <div class="nav-item">
+            <a href="#" class="has-dropdown"><i class="fas fa-box"></i> Orders</a>
+            <div class="dropdown-menu">
+                <a href="#">My Orders</a>
+                <a href="#">Track Package</a>
+                <a href="#">Returns</a>
+                <a href="#">Order History</a>
+            </div>
+        </div>
+        
+        <div class="nav-item cart-icon">
+            <a href="#"><i class="fas fa-shopping-cart"></i>
+                <span class="cart-count">3</span>
+            </a>
+        </div>
+    </div>
+</header>
+
+<!-- Navigation with Dropdowns -->
+<nav>
+    <button class="menu-toggle" (click)="toggleMobileMenu()"><i class="fas fa-bars"></i></button>
+    <div class="nav-container" [ngClass]="{'active': isMobileMenuOpen}">
+        <div class="nav-item" (click)="toggleDropdown('allCategoriesDropdown')">
+            <a href="#" class="has-dropdown">All Categories</a>
+            <div class="dropdown-menu" id="allCategoriesDropdown" [ngClass]="{'active': activeDropdown === 'allCategoriesDropdown'}">
+                <a href="#">Electronics</a>
+                <a href="#">Fashion</a>
+                <a href="#">Home & Kitchen</a>
+                <a href="#">Beauty & Personal Care</a>
+                <a href="#">Sports & Outdoors</a>
+                <a href="#">Toys & Games</a>
+                <a href="#">Books & Media</a>
+                <a href="#">Automotive</a>
+            </div>
+        </div>
+        
+        <div class="nav-item">
+            <a href="#">Top Deals</a>
+        </div>
+        
+        <div class="nav-item" (click)="toggleDropdown('electronicsDropdown')">
+            <a href="#" class="has-dropdown">Electronics</a>
+            <div class="dropdown-menu" id="electronicsDropdown" [ngClass]="{'active': activeDropdown === 'electronicsDropdown'}">
+                <a href="#">Smartphones</a>
+                <a href="#">Laptops & Computers</a>
+                <a href="#">Cameras</a>
+                <a href="#">Audio & Headphones</a>
+                <a href="#">TV & Home Theater</a>
+                <a href="#">Wearable Technology</a>
+                <a href="#">Computer Accessories</a>
+            </div>
+        </div>
+        
+        <div class="nav-item" (click)="toggleDropdown('fashionDropdown')">
+            <a href="#" class="has-dropdown">Fashion</a>
+            <div class="dropdown-menu" id="fashionDropdown" [ngClass]="{'active': activeDropdown === 'fashionDropdown'}">
+                <a href="#">Women's Clothing</a>
+                <a href="#">Men's Clothing</a>
+                <a href="#">Kids' Clothing</a>
+                <a href="#">Shoes</a>
+                <a href="#">Jewelry & Watches</a>
+                <a href="#">Handbags & Accessories</a>
+                <a href="#">Seasonal Collections</a>
+            </div>
+        </div>
+        
+        <!-- Add other dropdowns similarly here -->
+    </div>
+</nav>
