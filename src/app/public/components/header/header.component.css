@@ -200,7 +200,7 @@ nav .dropdown-menu.active {
 
 /* Font Awesome Arrow Icon for Dropdown */
 .has-dropdown::after {
-    content: '\f107'; /* Down arrow icon */
+    /*content: '\f107';    Down arrow icon */
     font-family: 'Font Awesome 5 Free';
     font-weight: 900;
     margin-left: 5px;
@@ -364,3 +364,11 @@ nav .dropdown-menu.active {
         padding: 0 8%;
     }
 }
+
+
+
+
+
+
+
+

@@ -1,4 +1,4 @@
-<!-- Header -->
+
 <header>
     <a href="#" class="logo">ShopHub</a>
     
@@ -11,8 +11,8 @@
         <div class="nav-item">
             <a href="#" class="has-dropdown">Sign In</a>
             <div class="dropdown-menu">
-                <a href="#">Login</a>
-                <a href="#">Register</a>
+                <a routerLink="login">Login</a>
+                <a routerLink="register">Register</a>
                 <a href="#">My Profile</a>
                 <a href="#">Settings</a>
             </div>
@@ -40,10 +40,17 @@
 <!-- Navigation with Dropdowns -->
 <nav>
     <button class="menu-toggle" (click)="toggleMobileMenu()"><i class="fas fa-bars"></i> Menu</button>
+   
     <div class="nav-container" [ngClass]="{'active': isMobileMenuOpen}">
+        <div class="nav-item">
+            <a routerLink="/">Home</a>
+        </div>
+      
         <div class="nav-item" (click)="toggleDropdown('allCategoriesDropdown')">
+          
             <a href="#" class="has-dropdown">All Categories</a>
             <div class="dropdown-menu" id="allCategoriesDropdown" [ngClass]="{'active': activeDropdown === 'allCategoriesDropdown'}">
+             
                 <a href="#">Electronics</a>
                 <a href="#">Fashion</a>
                 <a href="#">Home & Kitchen</a>
@@ -98,3 +105,8 @@
         </div>
     </div>
 </nav>
+
+
+
+
+
