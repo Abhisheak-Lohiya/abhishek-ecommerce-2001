@@ -13,18 +13,20 @@
             <div class="dropdown-menu">
                 <a routerLink="login">Login</a>
                 <a routerLink="register">Register</a>
-                <a href="#">My Profile</a>
-                <a href="#">Settings</a>
+                <a routerLink="my-profile">My profile</a>
+                <a routerLink="Settings">Settings</a>
+               
             </div>
         </div>
         
         <div class="nav-item">
             <a href="#" class="has-dropdown">Orders</a>
             <div class="dropdown-menu">
-                <a href="#">My Orders</a>
-                <a href="#">Track Package</a>
-                <a href="#">Returns</a>
-                <a href="#">Order History</a>
+               
+                <a routerLink="my-orders">My Orders</a>
+                <a routerLink="track-packages">Track Package</a>
+                <a routerLink="returns">Returns</a>
+                <a routerLink="order-history">Order History</a>
             </div>
         </div>
         
@@ -51,14 +53,14 @@
             <a href="#" class="has-dropdown">All Categories</a>
             <div class="dropdown-menu" id="allCategoriesDropdown" [ngClass]="{'active': activeDropdown === 'allCategoriesDropdown'}">
              
-                <a href="#">Electronics</a>
-                <a href="#">Fashion</a>
-                <a href="#">Home & Kitchen</a>
-                <a href="#">Beauty & Personal Care</a>
-                <a href="#">Sports & Outdoors</a>
-                <a href="#">Toys & Games</a>
-                <a href="#">Books & Media</a>
-                <a href="#">Automotive</a>
+                <a routerLink="electronics">Electronics</a>
+                <a routerLink="fashion">Fashion</a>
+                <a routerLink="home-kitchen">Home & Kitchen</a>
+                <a routerLink="beauty">Beauty & Personal Care</a>
+                <a routerLink="sports">Sports & Outdoors</a>
+                <a routerLink="toys">Toys & Games</a>
+                <a routerLink="books">Books & Media</a>
+                <a routerLink="Automative">Automotive</a>
             </div>
         </div>
         
@@ -69,13 +71,13 @@
         <div class="nav-item" (click)="toggleDropdown('electronicsDropdown')">
             <a href="#" class="has-dropdown">Electronics</a>
             <div class="dropdown-menu" id="electronicsDropdown" [ngClass]="{'active': activeDropdown === 'electronicsDropdown'}">
-                <a href="#">Smartphones</a>
-                <a href="#">Laptops & Computers</a>
-                <a href="#">Cameras</a>
-                <a href="#">Audio & Headphones</a>
-                <a href="#">TV & Home Theater</a>
-                <a href="#">Wearable Technology</a>
-                <a href="#">Computer Accessories</a>
+                <a routerLink="smartphones">Smartphones</a>
+                <a routerLink="laptops">Laptops & Computers</a>
+                <a routerLink="camera">Cameras</a>
+                <a routerLink="headphones">Audio & Headphones</a>
+                <a routerLink="tv">TV & Home Theater</a>
+                <a routerLink="wearable-technology">Wearable Technology</a>
+                <a routerLink="Invertor">Invertor</a>
             </div>
         </div>
         

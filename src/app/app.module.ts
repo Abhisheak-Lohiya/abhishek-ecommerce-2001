@@ -41,6 +41,7 @@ import { FooterComponent } from './public/components/footer/footer.component';
 import { LoginComponent } from './public/components/login/login.component';
 import { RegisterComponent } from './public/components/register/register.component';
 import { HomeComponent } from './public/components/home/home.component';
+import { MyProfileComponent } from './public/components/my-profile/my-profile.component';
 
 @NgModule({
   declarations: [
@@ -50,7 +51,8 @@ import { HomeComponent } from './public/components/home/home.component';
     FooterComponent,
     LoginComponent,
     RegisterComponent,
-    HomeComponent, // Added this as it was missing
+    HomeComponent,
+    MyProfileComponent, // Added this as it was missing
   ],
   imports: [
     BrowserModule,

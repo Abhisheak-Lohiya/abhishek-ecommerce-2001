@@ -368,3 +368,17 @@ footer {
         font-size: 24px;
     }
 }
+
+
+
+
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: black; /* Custom color for arrows */
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 5%; /* Adjust width of arrow buttons */
+}
