@@ -6,13 +6,17 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './public/components/header/header.component';
 import { SectionComponent } from './public/components/section/section.component';
 import { FooterComponent } from './public/components/footer/footer.component';
+import { LoginComponent } from './public/components/login/login.component';
+import { RegisterComponent } from './public/components/register/register.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     SectionComponent,
-    FooterComponent
+    FooterComponent,
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
