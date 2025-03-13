@@ -1,66 +1,25 @@
+.carousel-item {
+    height: 300px; /* Reduced height */
+}
 
-/* Special Offer Banner */
-.special-offer-banner {
+.carousel-item img {
+    object-fit: cover;
+    height: 100%;
     width: 100%;
-    position: relative;
-    background-color: #e0e0e0;
 }
 
-.special-offer-banner img {
-    width: 100%;
-    height: auto;
-    display: block;
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: black; /* Custom color for arrows */
 }
 
-.banner-arrow {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 50px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: rgba(0, 0, 0, 0.3);
-    color: white;
-    border-radius: 50%;
-    cursor: pointer;
-    font-size: 20px;
-    z-index: 2;
-    transition: background-color 0.3s;
+.carousel-control-prev,
+.carousel-control-next {
+    width: 5%; /* Adjust width of arrow buttons */
 }
 
-.banner-arrow:hover {
-    background-color: rgba(0, 0, 0, 0.5);
-}
 
-.banner-prev {
-    left: 20px;
-}
 
-.banner-next {
-    right: 20px;
-}
-
-/* Welcome Section */
-.welcome-section {
-    text-align: center;
-    padding: 40px 5%;
-    background-color: white;
-}
-
-.welcome-section h1 {
-    font-size: 32px;
-    margin-bottom: 15px;
-    color: #333;
-}
-
-.welcome-section p {
-    font-size: 18px;
-    color: #666;
-    max-width: 800px;
-    margin: 0 auto;
-}
 
 /* Featured Categories */
 .featured-categories {
