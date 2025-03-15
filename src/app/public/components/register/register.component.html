@@ -1,1 +1,312 @@
-<p>register works!</p>
+<!-- register.component.html -->
+<!-- <div class="register-page">
+    <div class="register-container">
+      <div class="register-image-side">
+        <div class="image-overlay">
+          <h2>Join Our Community</h2>
+          <p>Discover amazing products and exclusive offers</p>
+        </div>
+      </div>
+      
+      <div class="register-form-side">
+        <div class="form-header">
+          <h1>Create Your Account</h1>
+          <p>Sign up in just a few steps</p>
+        </div>
+        
+        <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="firstName">First Name</label>
+              <input 
+                type="text" 
+                id="firstName" 
+                formControlName="firstName" 
+                placeholder="John"
+                [ngClass]="{'invalid': registerForm.get('firstName')?.invalid && registerForm.get('firstName')?.touched}"
+              >
+              <div class="error-message" *ngIf="registerForm.get('firstName')?.invalid && registerForm.get('firstName')?.touched">
+                First name is required
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label for="lastName">Last Name</label>
+              <input 
+                type="text" 
+                id="lastName" 
+                formControlName="lastName" 
+                placeholder="Doe"
+                [ngClass]="{'invalid': registerForm.get('lastName')?.invalid && registerForm.get('lastName')?.touched}"
+              >
+              <div class="error-message" *ngIf="registerForm.get('lastName')?.invalid && registerForm.get('lastName')?.touched">
+                Last name is required
+              </div>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input 
+              type="email" 
+              id="email" 
+              formControlName="email" 
+              placeholder="your@email.com"
+              [ngClass]="{'invalid': registerForm.get('email')?.invalid && registerForm.get('email')?.touched}"
+            >
+            <div class="error-message" *ngIf="registerForm.get('email')?.invalid && registerForm.get('email')?.touched">
+              <span *ngIf="registerForm.get('email')?.errors?.['required']">Email is required</span>
+              <span *ngIf="registerForm.get('email')?.errors?.['email']">Please enter a valid email</span>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input 
+              type="password" 
+              id="password" 
+              formControlName="password" 
+              placeholder="Create a password (min. 6 characters)"
+              [ngClass]="{'invalid': registerForm.get('password')?.invalid && registerForm.get('password')?.touched}"
+            >
+            <div class="error-message" *ngIf="registerForm.get('password')?.invalid && registerForm.get('password')?.touched">
+              <span *ngIf="registerForm.get('password')?.errors?.['required']">Password is required</span>
+              <span *ngIf="registerForm.get('password')?.errors?.['minlength']">Password must be at least 6 characters</span>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label for="confirmPassword">Confirm Password</label>
+            <input 
+              type="password" 
+              id="confirmPassword" 
+              formControlName="confirmPassword" 
+              placeholder="Confirm your password"
+              [ngClass]="{'invalid': (registerForm.get('confirmPassword')?.invalid || registerForm.errors?.['passwordMismatch']) && registerForm.get('confirmPassword')?.touched}"
+            >
+            <div class="error-message" *ngIf="(registerForm.get('confirmPassword')?.invalid || registerForm.errors?.['passwordMismatch']) && registerForm.get('confirmPassword')?.touched">
+              <span *ngIf="registerForm.get('confirmPassword')?.errors?.['required']">Please confirm your password</span>
+              <span *ngIf="registerForm.errors?.['passwordMismatch']">Passwords don't match</span>
+            </div>
+          </div>
+          
+          <div class="form-group terms-container">
+            <div class="terms-checkbox">
+              <input type="checkbox" id="termsAccepted" formControlName="termsAccepted">
+              <label for="termsAccepted">I agree to the <a href="/terms" target="_blank">Terms of Service</a> and <a href="/privacy" target="_blank">Privacy Policy</a></label>
+            </div>
+            <div class="error-message" *ngIf="registerForm.get('termsAccepted')?.invalid && registerForm.get('termsAccepted')?.touched">
+              <span>You must accept the terms to continue</span>
+            </div>
+          </div>
+          
+          <div class="error-message submission-error" *ngIf="registrationError">{{ registrationError }}</div>
+          
+          <button 
+            type="submit" 
+            class="register-button" 
+            [disabled]="registerForm.invalid || isSubmitting"
+          >
+            <span *ngIf="!isSubmitting">Create Account</span>
+            <span *ngIf="isSubmitting">
+              <svg class="spinner" viewBox="0 0 50 50">
+                <circle class="path" cx="25" cy="25" r="20" fill="none" stroke-width="5"></circle>
+              </svg>
+              Creating...
+            </span>
+          </button>
+        </form>
+        
+        <div class="login-link">
+          Already have an account? <a href="/login">Sign in</a>
+        </div>
+      </div>
+    </div>
+  </div> -->
+
+
+
+
+  <!-- register.component.html -->
+<div class="register-wrapper">
+    <div class="wave-background">
+      <div class="wave wave1"></div>
+      <div class="wave wave2"></div>
+      <div class="wave wave3"></div>
+      <div class="wave wave4"></div>
+    </div>
+    
+    <div class="container">
+      <div class="register-card">
+        <div class="brand-section">
+          <div class="brand-logo">
+            <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M30 5L40 20H20L30 5Z" fill="#4C84FF"/>
+              <path d="M15 25H45V40C45 45.5 40.5 50 35 50H25C19.5 50 15 45.5 15 40V25Z" fill="#4C84FF"/>
+              <path d="M12 25H48M35 15L25 40" stroke="white" stroke-width="2"/>
+            </svg>
+          </div>
+          <h2>ShopEase</h2>
+          <p>Your one-stop shopping destination</p>
+        </div>
+        
+        <div class="form-container">
+          <div class="form-header">
+            <h1>Create Account</h1>
+            <p>Join thousands of happy shoppers</p>
+          </div>
+          
+          <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="firstName">First Name</label>
+                <div class="input-with-icon">
+                  <i class="icon user-icon"></i>
+                  <input 
+                    type="text" 
+                    id="firstName" 
+                    formControlName="firstName" 
+                    placeholder="First Name"
+                    [ngClass]="{'invalid': registerForm.get('firstName')?.invalid && registerForm.get('firstName')?.touched}"
+                  >
+                </div>
+                <div class="error-message" *ngIf="registerForm.get('firstName')?.invalid && registerForm.get('firstName')?.touched">
+                  First name is required
+                </div>
+              </div>
+              
+              <div class="form-group">
+                <label for="lastName">Last Name</label>
+                <div class="input-with-icon">
+                  <i class="icon user-icon"></i>
+                  <input 
+                    type="text" 
+                    id="lastName" 
+                    formControlName="lastName" 
+                    placeholder="Last Name"
+                    [ngClass]="{'invalid': registerForm.get('lastName')?.invalid && registerForm.get('lastName')?.touched}"
+                  >
+                </div>
+                <div class="error-message" *ngIf="registerForm.get('lastName')?.invalid && registerForm.get('lastName')?.touched">
+                  Last name is required
+                </div>
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <div class="input-with-icon">
+                <i class="icon email-icon"></i>
+                <input 
+                  type="email" 
+                  id="email" 
+                  formControlName="email" 
+                  placeholder="your@email.com"
+                  [ngClass]="{'invalid': registerForm.get('email')?.invalid && registerForm.get('email')?.touched}"
+                >
+              </div>
+              <div class="error-message" *ngIf="registerForm.get('email')?.invalid && registerForm.get('email')?.touched">
+                <span *ngIf="registerForm.get('email')?.errors?.['required']">Email is required</span>
+                <span *ngIf="registerForm.get('email')?.errors?.['email']">Please enter a valid email</span>
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label for="password">Password</label>
+              <div class="input-with-icon">
+                <i class="icon lock-icon"></i>
+                <input 
+                  type="password" 
+                  id="password" 
+                  formControlName="password" 
+                  placeholder="Minimum 6 characters"
+                  [ngClass]="{'invalid': registerForm.get('password')?.invalid && registerForm.get('password')?.touched}"
+                >
+              </div>
+              <div class="error-message" *ngIf="registerForm.get('password')?.invalid && registerForm.get('password')?.touched">
+                <span *ngIf="registerForm.get('password')?.errors?.['required']">Password is required</span>
+                <span *ngIf="registerForm.get('password')?.errors?.['minlength']">Password must be at least 6 characters</span>
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label for="confirmPassword">Confirm Password</label>
+              <div class="input-with-icon">
+                <i class="icon lock-icon"></i>
+                <input 
+                  type="password" 
+                  id="confirmPassword" 
+                  formControlName="confirmPassword" 
+                  placeholder="Confirm your password"
+                  [ngClass]="{'invalid': (registerForm.get('confirmPassword')?.invalid || registerForm.errors?.['passwordMismatch']) && registerForm.get('confirmPassword')?.touched}"
+                >
+              </div>
+              <div class="error-message" *ngIf="(registerForm.get('confirmPassword')?.invalid || registerForm.errors?.['passwordMismatch']) && registerForm.get('confirmPassword')?.touched">
+                <span *ngIf="registerForm.get('confirmPassword')?.errors?.['required']">Please confirm your password</span>
+                <span *ngIf="registerForm.errors?.['passwordMismatch']">Passwords don't match</span>
+              </div>
+            </div>
+            
+            <div class="form-group terms-container">
+              <div class="terms-checkbox">
+                <input type="checkbox" id="termsAccepted" formControlName="termsAccepted">
+                <label for="termsAccepted" class="checkbox-label">I agree to the <a href="/terms" target="_blank">Terms of Service</a> and <a href="/privacy" target="_blank">Privacy Policy</a></label>
+              </div>
+              <div class="error-message" *ngIf="registerForm.get('termsAccepted')?.invalid && registerForm.get('termsAccepted')?.touched">
+                <span>You must accept the terms to continue</span>
+              </div>
+            </div>
+            
+            <div class="error-message submission-error" *ngIf="registrationError">{{ registrationError }}</div>
+            
+            <button 
+              type="submit" 
+              class="register-button" 
+              [disabled]="registerForm.invalid || isSubmitting"
+            >
+              <span *ngIf="!isSubmitting">Create Account</span>
+              <span *ngIf="isSubmitting" class="loading-container">
+                <span class="loading-dots">
+                  <span class="dot"></span>
+                  <span class="dot"></span>
+                  <span class="dot"></span>
+                </span>
+                Creating Account
+              </span>
+            </button>
+            
+            <div class="social-register">
+              <p>Or register with</p>
+              <div class="social-buttons">
+                <button type="button" class="social-btn google">
+                  <svg viewBox="0 0 24 24" width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+                    <g transform="matrix(1, 0, 0, 1, 27.009001, -39.238998)">
+                      <path fill="#4285F4" d="M -3.264 51.509 C -3.264 50.719 -3.334 49.969 -3.454 49.239 L -14.754 49.239 L -14.754 53.749 L -8.284 53.749 C -8.574 55.229 -9.424 56.479 -10.684 57.329 L -10.684 60.329 L -6.824 60.329 C -4.564 58.239 -3.264 55.159 -3.264 51.509 Z"/>
+                      <path fill="#34A853" d="M -14.754 63.239 C -11.514 63.239 -8.804 62.159 -6.824 60.329 L -10.684 57.329 C -11.764 58.049 -13.134 58.489 -14.754 58.489 C -17.884 58.489 -20.534 56.379 -21.484 53.529 L -25.464 53.529 L -25.464 56.619 C -23.494 60.539 -19.444 63.239 -14.754 63.239 Z"/>
+                      <path fill="#FBBC05" d="M -21.484 53.529 C -21.734 52.809 -21.864 52.039 -21.864 51.239 C -21.864 50.439 -21.724 49.669 -21.484 48.949 L -21.484 45.859 L -25.464 45.859 C -26.284 47.479 -26.754 49.299 -26.754 51.239 C -26.754 53.179 -26.284 54.999 -25.464 56.619 L -21.484 53.529 Z"/>
+                      <path fill="#EA4335" d="M -14.754 43.989 C -12.984 43.989 -11.404 44.599 -10.154 45.789 L -6.734 42.369 C -8.804 40.429 -11.514 39.239 -14.754 39.239 C -19.444 39.239 -23.494 41.939 -25.464 45.859 L -21.484 48.949 C -20.534 46.099 -17.884 43.989 -14.754 43.989 Z"/>
+                    </g>
+                  </svg>
+                </button>
+                <button type="button" class="social-btn facebook">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                    <path fill="#1877F2" d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                  </svg>
+                </button>
+                <button type="button" class="social-btn apple">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                    <path d="M16.498 0c0.382 2.516-0.737 5.016-2.214 6.661-1.446 1.626-3.813 2.854-6.139 2.706-0.351-2.284 1.008-4.868 2.341-6.376 1.479-1.692 4.012-2.908 6.012-2.991zM23.031 18.634c-0.474 1.146-0.701 1.652-1.315 2.658-0.802 1.376-1.938 3.051-3.364 3.057-1.254 0.012-1.592-0.84-3.301-0.832-1.716 0.011-2.081 0.844-3.335 0.832-1.425-0.010-2.511-1.559-3.317-2.936-2.266-3.902-2.513-8.465-1.103-10.887 0.992-1.706 2.575-2.726 4.064-2.726 1.52 0 2.462 0.839 3.706 0.839 1.204 0 1.93-0.839 3.662-0.839 1.304 0 2.721 0.79 3.717 2.147-3.263 1.881-2.736 6.784 0.586 8.685z"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </form>
+          
+          <div class="login-link">
+            Already have an account? <a href="/login">Sign in</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+      

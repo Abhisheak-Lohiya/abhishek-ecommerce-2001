@@ -1,6 +1,7 @@
 
 
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -9,5 +10,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ecommerce-app';
+
+
+
+  constructor(private router: Router) {}
+  
+  isAuthPage(): boolean {
+    const currentRoute = this.router.url;
+    return currentRoute === '/login' || currentRoute === '/register';
+  }
+  
   
 }
