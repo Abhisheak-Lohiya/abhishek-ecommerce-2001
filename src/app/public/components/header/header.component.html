@@ -154,10 +154,18 @@
 </header>
 
 <nav>
+
+
     <button class="menu-toggle" (click)="toggleMobileMenu()"><i class="fas fa-bars"></i></button>
    
     <div class="nav-container" [ngClass]="{'active': isMobileMenuOpen}">
+        <div class="nav-container" [ngClass]="{'active': isMobileMenuOpen}">
+            <div class="nav-item">
+                <a routerLink="/">Home</a>
+            </div>
+      </div>
         <div class="nav-item" (mouseover)="onMouseOver('allCategoriesDropdown')" (mouseleave)="onMouseLeave()">
+           
             <a href="#" class="has-dropdown">All Categories</a>
             <div class="dropdown-menu" [ngClass]="{'active': activeDropdown === 'allCategoriesDropdown'}">
                 <a routerLink="electronics">Electronics</a>
