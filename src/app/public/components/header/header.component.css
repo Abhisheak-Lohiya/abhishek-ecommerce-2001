@@ -1,7 +1,7 @@
 
 
 
-
+/* 
 
 /* Add this to your CSS file */
 nav .nav-item .dropdown-menu {
@@ -130,8 +130,9 @@ header {
 
 .cart-count {
     position: absolute;
-    top: -8px;
-    right: -8px;
+ 
+    top: -10px;
+    right: -15px;
     background-color: #ff9900;
     color: white;
     border-radius: 50%;
@@ -408,4 +409,4 @@ nav .dropdown-menu.active {
 
 
 
-
+ 
