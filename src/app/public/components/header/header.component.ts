@@ -1,8 +1,4 @@
 
-
-
-
-
 import { Component, HostListener, OnInit } from '@angular/core';
 
 @Component({
@@ -23,14 +19,9 @@ export class HeaderComponent implements OnInit {
     });
   }
 
-
-
-
-  
-
   // Toggle dropdown function
   toggleDropdown(dropdownId: string): void {
-    // Toggle the dropdown active state
+    // Close the dropdown if the same one is clicked again
     this.activeDropdown = this.activeDropdown === dropdownId ? null : dropdownId;
   }
   
@@ -44,21 +35,10 @@ export class HeaderComponent implements OnInit {
   onDocumentClick(event: MouseEvent): void {
     const target = event.target as HTMLElement;
     // Check if the click was outside dropdown triggers
-    if (!target.closest('.has-dropdown')) {
-      this.activeDropdown = null;
+    if (!target.closest('.nav-item') && !target.closest('.menu-toggle')) {
+      this.activeDropdown = null; // Close any active dropdowns
     }
   }
-
-  
-
-
-
-
-  
 }
-
-
-
-
 
 

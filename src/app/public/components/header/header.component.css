@@ -1,38 +1,28 @@
 
-
-
-/* 
-
-/* Add this to your CSS file */
-nav .nav-item .dropdown-menu {
+/* Make sure dropdown is hidden by default */
+.nav-item .dropdown-menu {
     display: none;
     position: absolute;
-    /* Your existing styles */
-  }
-  
-  nav .nav-item .dropdown-menu.active {
+    top: 100%;
+    left: 0;
+    background-color: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s ease-in-out;
+}
+
+/* Show dropdown when it's active */
+.nav-item .dropdown-menu.active {
     display: block !important;
     opacity: 1 !important;
     visibility: visible !important;
     transform: translateY(0) !important;
-  }
-  
-  /* Prevent Bootstrap's dropdown events from affecting your custom ones */
-  .nav-item > a.has-dropdown[data-bs-toggle] {
-    pointer-events: none;
-  }
-
-
-
-
-
-
-
-
-
-
-
-
+}
+.login{
+    padding-left:8px;
+}
 
 * {
     margin: 0;

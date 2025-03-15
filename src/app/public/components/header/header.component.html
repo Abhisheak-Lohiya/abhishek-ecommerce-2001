@@ -12,7 +12,7 @@
     
     <div class="nav-buttons">
         <div class="nav-item" (click)="toggleDropdown('signInDropdown')">
-            <a href="#" class="has-dropdown">Sign In</a>
+            <a href="#" class="has-dropdown">  <i class="fas fa-user"></i> <span class="login">Login</span></a>
             <div class="dropdown-menu" [ngClass]="{'active': activeDropdown === 'signInDropdown'}">
                 <a routerLink="login">Login</a>
                 <a routerLink="register">Register</a>
