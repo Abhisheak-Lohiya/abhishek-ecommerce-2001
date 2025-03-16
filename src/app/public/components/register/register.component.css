@@ -28,60 +28,7 @@
     justify-content: center;
   }
   
-  /* Wave background animation */
-  /* .wave-background {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    overflow: hidden;
-    z-index: 1;
-  }
-  
-  .wave {
-    position: absolute;
-    width: 200%;
-    height: 200%;
-    opacity: 0.3;
-    border-radius: 40%;
-  }
-  
-  .wave1 {
-    background: rgba(76, 132, 255, 0.2);
-    bottom: -80%;
-    left: -50%;
-    animation: wave 18s linear infinite;
-  }
-  
-  .wave2 {
-    background: rgba(76, 132, 255, 0.15);
-    bottom: -70%;
-    left: -30%;
-    animation: wave 16s linear infinite;
-    animation-delay: -5s;
-  }
-
-
-
-
-  .wave3 {
-    background: rgba(76, 132, 255, 0.1);
-    bottom: -60%;
-    right: -40%;
-    animation: wave 20s linear infinite;
-    animation-delay: -2s;
-  }
-  
-  .wave4 {
-    background: rgba(76, 132, 255, 0.05);
-    bottom: -65%;
-    right: -35%;
-    animation: wave 22s linear infinite;
-    animation-delay: -7s;
-  } */
-
-
+ 
 
   /* Wave background animation */
 .wave-background {

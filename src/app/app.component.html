@@ -1,6 +1,11 @@
+
+
+
+
 <header>
     
-    <app-header></app-header>
+    <!-- <app-header></app-header> -->
+    <app-header *ngIf="!isLoginOrRegisterPage"></app-header>
   </header>
   
   <main>
@@ -11,6 +16,4 @@
   <footer>
     <app-footer></app-footer>
   </footer>
-
-
 

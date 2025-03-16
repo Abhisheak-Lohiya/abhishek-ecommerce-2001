@@ -1,14 +1,5 @@
-// import { Component } from '@angular/core';
 
-// @Component({
-//   selector: 'app-register',
-//   templateUrl: './register.component.html',
-//   styleUrl: './register.component.css'
-// })
-// export class RegisterComponent {
-
-// }
-// register.component.ts
+// // register.component.ts
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
@@ -85,3 +76,5 @@ export class RegisterComponent implements OnInit {
     }, 1000);
   }
 }
+
+

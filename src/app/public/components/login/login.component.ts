@@ -1,13 +1,7 @@
-// import { Component } from '@angular/core';
 
-// @Component({
-//   selector: 'app-login',
-//   templateUrl: './login.component.html',
-//   styleUrl: './login.component.css'
-// })
-// export class LoginComponent {
 
-// }
+
+
 
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
@@ -28,7 +22,7 @@ export class LoginComponent implements OnInit {
     private router: Router
   ) {}
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.loginForm = this.formBuilder.group({
       email: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.required, Validators.minLength(6)]],
@@ -36,7 +30,7 @@ export class LoginComponent implements OnInit {
     });
   }
 
-  onSubmit() {
+  onSubmit(): void {
     if (this.loginForm.invalid) {
       return;
     }
@@ -53,12 +47,18 @@ export class LoginComponent implements OnInit {
       if (email === 'demo@example.com' && password === 'password123') {
         // Save token to localStorage or a service
         localStorage.setItem('isLoggedIn', 'true');
+        
+        // Navigate to dashboard after successful login
         this.router.navigate(['/dashboard']);
+        
+        // Reset the form after successful login
+        this.loginForm.reset();
+
       } else {
         this.loginError = 'Invalid email or password';
       }
-      
+
       this.isSubmitting = false;
-    }, 1000);
+    }, 1000); // Simulate async login process
   }
 }
