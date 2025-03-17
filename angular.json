@@ -23,6 +23,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
+            "baseHref": "/abhishek-ecommerce-2001/",
             "outputPath": "dist/ecommerce-web",
             "index": "src/index.html",
             "browser": "src/main.ts",
