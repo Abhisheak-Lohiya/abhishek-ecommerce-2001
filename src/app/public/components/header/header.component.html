@@ -1,158 +1,159 @@
-
 <header class="modern-header">
-    <div class="header-container">
-      <!-- Logo and Toggle Button -->
-      <div class="logo-container">
-        <a href="#" class="logo">
-          <span class="logo-icon">🛒</span>
-          <span class="logo-text">ShopHub</span>
-        </a>
-        <button class="menu-toggle" (click)="toggleMobileMenu()">
-          <i class="fas fa-bars"></i>
-        </button>
-      </div>
-      
-      <!-- Search Bar -->
-      <div class="search-container">
-        <div class="search-wrapper">
-          <i class="fas fa-search search-icon"></i>
-          <input type="text" placeholder="Search for products, brands and more...">
-          <button class="search-button">Search</button>
-        </div>
-      </div>
-      
-      <!-- User Actions -->
-      <div class="nav-buttons">
-        <!-- Sign In Dropdown -->
-        <div class="nav-item user-dropdown" (mouseover)="onMouseOver('signInDropdown')" (mouseleave)="onMouseLeave()">
-          <a href="#" class="has-dropdown">
-            <i class="fas fa-user-circle"></i>
-            <span class="button-text">Account</span>
-            <i class="fas fa-chevron-down dropdown-arrow"></i>
-          </a>
-          <div class="dropdown-menu account-dropdown" [ngClass]="{'active': activeDropdown === 'signInDropdown'}">
-            <div class="dropdown-header">My Account</div>
-            <a routerLink="login"><i class="fas fa-sign-in-alt"></i> Login</a>
-            <a routerLink="register"><i class="fas fa-user-plus"></i> Register</a>
-            <a routerLink="my-profile"><i class="fas fa-user"></i> My Profile</a>
-            <a routerLink="Settings"><i class="fas fa-cog"></i> Settings</a>
-          </div>
-        </div>
-        
-        <!-- Orders Dropdown -->
-        <div class="nav-item" (mouseover)="onMouseOver('ordersDropdown')" (mouseleave)="onMouseLeave()">
-          <a href="#" class="has-dropdown">
-            <i class="fas fa-box"></i>
-            <span class="button-text">Orders</span>
-            <i class="fas fa-chevron-down dropdown-arrow"></i>
-          </a>
-          <div class="dropdown-menu" [ngClass]="{'active': activeDropdown === 'ordersDropdown'}">
-            <div class="dropdown-header">My Orders</div>
-            <a routerLink="my-orders"><i class="fas fa-list"></i> My Orders</a>
-            <a routerLink="track-packages"><i class="fas fa-truck"></i> Track Package</a>
-            <a routerLink="returns"><i class="fas fa-undo"></i> Returns</a>
-            <a routerLink="order-history"><i class="fas fa-history"></i> Order History</a>
-          </div>
-        </div>
-        
-        <!-- Cart Icon -->
-        <div class="cart-icon">
-          <a href="#">
-            <i class="fas fa-shopping-cart"></i>
-            <span class="cart-count">3</span>
-          </a>
-        </div>
+  <div class="header-container">
+    <!-- Logo and Toggle Button -->
+    <div class="logo-container">
+      <a href="#" class="logo">
+        <span class="logo-icon">🛒</span>
+        <span class="logo-text">ShopHub</span>
+      </a>
+      <button class="menu-toggle" (click)="toggleMobileMenu()">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+
+    <!-- Search Bar -->
+    <div class="search-container">
+      <div class="search-wrapper">
+        <i class="fas fa-search search-icon"></i>
+        <input type="text" placeholder="Search for products, brands and more...">
+        <button class="search-button">Search</button>
       </div>
     </div>
-  </header>
-  
-  <!-- Navigation -->
-  <nav class="main-nav">
-    <div class="nav-container" [ngClass]="{'active': isMobileMenuOpen}">
-      <div class="nav-item home-link">
-        <a routerLink="/"><i class="fas fa-home"></i> Home</a>
-      </div>
-      
-      <div class="nav-item mega-dropdown" (mouseover)="onMouseOver('allCategoriesDropdown')" (mouseleave)="onMouseLeave()">
+
+    <!-- User Actions -->
+    <div class="nav-buttons">
+      <!-- Sign In Dropdown -->
+      <div class="nav-item user-dropdown" (mouseover)="onMouseOver('signInDropdown')" (mouseleave)="onMouseLeave()">
         <a href="#" class="has-dropdown">
-          <i class="fas fa-th-large"></i> All Categories
+          <i class="fas fa-user-circle"></i>
+          <span class="button-text">Account</span>
           <i class="fas fa-chevron-down dropdown-arrow"></i>
         </a>
-        <div class="dropdown-menu mega-menu" [ngClass]="{'active': activeDropdown === 'allCategoriesDropdown'}">
-          <div class="mega-menu-row">
-            <div class="mega-menu-column">
-              <h3>Popular Categories</h3>
-              <a routerLink="electronics"><i class="fas fa-laptop"></i> Electronics</a>
-              <a routerLink="fashion"><i class="fas fa-tshirt"></i> Fashion</a>
-              <a routerLink="home-kitchen"><i class="fas fa-home"></i> Home & Kitchen</a>
-              <a routerLink="beauty"><i class="fas fa-spa"></i> Beauty & Personal Care</a>
-            </div>
-            <div class="mega-menu-column">
-              <h3>More Categories</h3>
-              <a routerLink="sports"><i class="fas fa-running"></i> Sports & Outdoors</a>
-              <a routerLink="toys"><i class="fas fa-gamepad"></i> Toys & Games</a>
-              <a routerLink="books"><i class="fas fa-book"></i> Books & Media</a>
-              <a routerLink="automotive"><i class="fas fa-car"></i> Automotive</a>
-            </div>
-            <div class="mega-menu-column promo-column">
-              <div class="promo-box">
-                <h3>New Arrivals</h3>
-                <p>Check out our latest products!</p>
-                <a href="#" class="promo-button">Shop Now</a>
-              </div>
-            </div>
-          </div>
+        <div class="dropdown-menu account-dropdown" [ngClass]="{'active': activeDropdown === 'signInDropdown'}">
+          <div class="dropdown-header">My Account</div>
+          <a routerLink="login"><i class="fas fa-sign-in-alt"></i> Login</a>
+          <a routerLink="register"><i class="fas fa-user-plus"></i> Register</a>
+          <a routerLink="my-profile"><i class="fas fa-user"></i> My Profile</a>
+          <a routerLink="Settings"><i class="fas fa-cog"></i> Settings</a>
         </div>
       </div>
-      
-      <div class="nav-item" (mouseover)="onMouseOver('electronicsDropdown')" (mouseleave)="onMouseLeave()">
+
+      <!-- Orders Dropdown -->
+      <div class="nav-item" (mouseover)="onMouseOver('ordersDropdown')" (mouseleave)="onMouseLeave()">
         <a href="#" class="has-dropdown">
-          <i class="fas fa-laptop"></i> Electronics
+          <i class="fas fa-box"></i>
+          <span class="button-text">Orders</span>
           <i class="fas fa-chevron-down dropdown-arrow"></i>
         </a>
-        <div class="dropdown-menu" [ngClass]="{'active': activeDropdown === 'electronicsDropdown'}">
-          <a routerLink="smartphones"><i class="fas fa-mobile-alt"></i> Smartphones</a>
-          <a routerLink="laptops"><i class="fas fa-laptop"></i> Laptops & Computers</a>
-          <a routerLink="camera"><i class="fas fa-camera"></i> Cameras</a>
-          <a routerLink="headphones"><i class="fas fa-headphones"></i> Audio & Headphones</a>
-          <a routerLink="tv"><i class="fas fa-tv"></i> TV & Home Theater</a>
-          <a routerLink="wearable-technology"><i class="fas fa-watch"></i> Wearable Technology</a>
-          <a routerLink="inverter"><i class="fas fa-bolt"></i> Inverter</a>
+        <div class="dropdown-menu" [ngClass]="{'active': activeDropdown === 'ordersDropdown'}">
+          <div class="dropdown-header">My Orders</div>
+          <a routerLink="my-orders"><i class="fas fa-list"></i> My Orders</a>
+          <a routerLink="track-packages"><i class="fas fa-truck"></i> Track Package</a>
+          <a routerLink="returns"><i class="fas fa-undo"></i> Returns</a>
+          <a routerLink="order-history"><i class="fas fa-history"></i> Order History</a>
         </div>
       </div>
-      
-      <div class="nav-item" (mouseover)="onMouseOver('fashionDropdown')" (mouseleave)="onMouseLeave()">
-        <a href="#" class="has-dropdown">
-          <i class="fas fa-tshirt"></i> Fashion
-          <i class="fas fa-chevron-down dropdown-arrow"></i>
-        </a>
-        <div class="dropdown-menu" [ngClass]="{'active': activeDropdown === 'fashionDropdown'}">
-          <a href="#"><i class="fas fa-female"></i> Women's Clothing</a>
-          <a href="#"><i class="fas fa-male"></i> Men's Clothing</a>
-          <a href="#"><i class="fas fa-child"></i> Kids' Clothing</a>
-          <a href="#"><i class="fas fa-shoe-prints"></i> Shoes</a>
-          <a href="#"><i class="fas fa-gem"></i> Jewelry & Watches</a>
-          <a href="#"><i class="fas fa-shopping-bag"></i> Handbags & Accessories</a>
-          <a href="#"><i class="fas fa-calendar-alt"></i> Seasonal Collections</a>
-        </div>
-      </div>
-      
-      <div class="nav-item highlight-item">
-        <a href="#" class="highlight-link">
-          <i class="fas fa-percentage"></i> Total Sale
-        </a>
-      </div>
-      
-      <div class="nav-item">
+
+      <!-- Cart Icon -->
+      <div class="cart-icon">
         <a href="#">
-          <i class="fas fa-star"></i> New Arrivals
-        </a>
-      </div>
-      
-      <div class="nav-item">
-        <a href="#">
-          <i class="fas fa-award"></i> Best Sellers
+          <i class="fas fa-shopping-cart"></i>
+          <span class="cart-count">3</span>
         </a>
       </div>
     </div>
-  </nav>
+  </div>
+</header>
+
+<!-- Navigation -->
+ <!-- <section></section> -->
+<nav class="main-nav">
+  <div class="nav-container" [ngClass]="{'active': isMobileMenuOpen}">
+    <div class="nav-item home-link">
+      <a routerLink="/"><i class="fas fa-home"></i> Home</a>
+    </div>
+
+    <div class="nav-item mega-dropdown" (mouseover)="onMouseOver('allCategoriesDropdown')"
+      (mouseleave)="onMouseLeave()">
+      <a href="#" class="has-dropdown">
+        <i class="fas fa-th-large"></i> All Categories
+        <i class="fas fa-chevron-down dropdown-arrow"></i>
+      </a>
+      <div class="dropdown-menu mega-menu" [ngClass]="{'active': activeDropdown === 'allCategoriesDropdown'}">
+        <div class="mega-menu-row">
+          <div class="mega-menu-column">
+            <h3>Popular Categories</h3>
+            <a routerLink="electronics"><i class="fas fa-laptop"></i> Electronics</a>
+            <a routerLink="fashion"><i class="fas fa-tshirt"></i> Fashion</a>
+            <a routerLink="home-kitchen"><i class="fas fa-home"></i> Home & Kitchen</a>
+            <a routerLink="beauty"><i class="fas fa-spa"></i> Beauty & Personal Care</a>
+          </div>
+          <div class="mega-menu-column">
+            <h3>More Categories</h3>
+            <a routerLink="sports"><i class="fas fa-running"></i> Sports & Outdoors</a>
+            <a routerLink="toys"><i class="fas fa-gamepad"></i> Toys & Games</a>
+            <a routerLink="books"><i class="fas fa-book"></i> Books & Media</a>
+            <a routerLink="automotive"><i class="fas fa-car"></i> Automotive</a>
+          </div>
+          <div class="mega-menu-column promo-column">
+            <div class="promo-box">
+              <h3>New Arrivals</h3>
+              <p>Check out our latest products!</p>
+              <a href="#" class="promo-button">Shop Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="nav-item" (mouseover)="onMouseOver('electronicsDropdown')" (mouseleave)="onMouseLeave()">
+      <a href="#" class="has-dropdown">
+        <i class="fas fa-laptop"></i> Electronics
+        <i class="fas fa-chevron-down dropdown-arrow"></i>
+      </a>
+      <div class="dropdown-menu" [ngClass]="{'active': activeDropdown === 'electronicsDropdown'}">
+        <a routerLink="smartphones"><i class="fas fa-mobile-alt"></i> Smartphones</a>
+        <a routerLink="laptops"><i class="fas fa-laptop"></i> Laptops & Computers</a>
+        <a routerLink="camera"><i class="fas fa-camera"></i> Cameras</a>
+        <a routerLink="headphones"><i class="fas fa-headphones"></i> Audio & Headphones</a>
+        <a routerLink="tv"><i class="fas fa-tv"></i> TV & Home Theater</a>
+        <a routerLink="wearable-technology"><i class="fas fa-watch"></i> Wearable Technology</a>
+        <a routerLink="inverter"><i class="fas fa-bolt"></i> Inverter</a>
+      </div>
+    </div>
+
+    <div class="nav-item" (mouseover)="onMouseOver('fashionDropdown')" (mouseleave)="onMouseLeave()">
+      <a href="#" class="has-dropdown">
+        <i class="fas fa-tshirt"></i> Fashion
+        <i class="fas fa-chevron-down dropdown-arrow"></i>
+      </a>
+      <div class="dropdown-menu" [ngClass]="{'active': activeDropdown === 'fashionDropdown'}">
+        <a href="#"><i class="fas fa-female"></i> Women's Clothing</a>
+        <a href="#"><i class="fas fa-male"></i> Men's Clothing</a>
+        <a href="#"><i class="fas fa-child"></i> Kids' Clothing</a>
+        <a href="#"><i class="fas fa-shoe-prints"></i> Shoes</a>
+        <a href="#"><i class="fas fa-gem"></i> Jewelry & Watches</a>
+        <a href="#"><i class="fas fa-shopping-bag"></i> Handbags & Accessories</a>
+        <a href="#"><i class="fas fa-calendar-alt"></i> Seasonal Collections</a>
+      </div>
+    </div>
+
+    <div class="nav-item highlight-item">
+      <a href="#" class="highlight-link">
+        <i class="fas fa-percentage"></i> Total Sale
+      </a>
+    </div>
+
+    <div class="nav-item">
+      <a href="#">
+        <i class="fas fa-star"></i> New Arrivals
+      </a>
+    </div>
+
+    <div class="nav-item">
+      <a href="#">
+        <i class="fas fa-award"></i> Best Sellers
+      </a>
+    </div>
+  </div>
+</nav>
