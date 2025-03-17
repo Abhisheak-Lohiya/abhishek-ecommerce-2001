@@ -41,9 +41,6 @@
 //   }
 // }
 
-
-
-
 import { Component, HostListener, OnInit } from '@angular/core';
 
 @Component({
@@ -56,7 +53,7 @@ export class HeaderComponent implements OnInit {
   isMobileMenuOpen: boolean = false; // Mobile menu state
   
   ngOnInit() {
-    // Disable Bootstrap dropdowns on our custom elements
+    // Disable Bootstrap dropdowns on custom elements
     const dropdownElements = document.querySelectorAll('.nav-item > a.has-dropdown');
     dropdownElements.forEach(element => {
       element.removeAttribute('data-bs-toggle');
@@ -73,7 +70,7 @@ export class HeaderComponent implements OnInit {
   onMouseLeave(): void {
     this.activeDropdown = null;  // Close the dropdown
   }
-  
+
   // Toggle mobile menu
   toggleMobileMenu(): void {
     this.isMobileMenuOpen = !this.isMobileMenuOpen;
@@ -88,5 +85,3 @@ export class HeaderComponent implements OnInit {
     }
   }
 }
-
-
